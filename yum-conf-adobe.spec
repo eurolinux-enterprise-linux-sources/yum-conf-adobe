@@ -1,6 +1,6 @@
 Name:           yum-conf-adobe       
 Version:        6
-Release:        1.1
+Release:        1.2
 Summary:        linux.adobe.com Repository Configuration
 Group:          System Environment/Base 
 License:        BSD 
@@ -14,6 +14,7 @@ Requires:	adobe-release-i386
 Requires:	adobe-release-i386
 Requires:	adobe-release-x86_64
 %endif
+Requires:	yum-plugin-fastestmirror
 
 %description
 This package pulls in adobe-release which contains the
@@ -23,6 +24,9 @@ linuxdownload.adobe.com yum repository for your architecture.
 
 
 %changelog
+* Tue Dec 6 2011 Pat Riehecky <riehecky@fnal.gov> - 6-1.2
+- Added requires yum-plugin-fastest mirror (adding to all non SL yum-conf packages)
+
 * Tue Nov 29 2011 Pat Riehecky <riehecky@fnal.gov> - 6-1.1
 - Modified the description and requires so that we can use the 64-bit repo adobe is now providing
 
